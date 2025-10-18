@@ -21,8 +21,48 @@
     </div>
   </header>
 
-  <main id="content">
-    <!-- Hospitals list will load here -->
+  <main class="dashboard">
+    <!-- Left: Hospital List -->
+    <div class="hospital-list" id="content">
+      <!-- Hospitals, Departments, Doctors will load here -->
+    </div>
+
+    <!-- Right: User Panel -->
+    <div class="user-panel">
+      <h2>Register / Login</h2>
+      <form id="user-form">
+        <label>
+          Name:<br>
+          <input type="text" id="user-name" required>
+        </label>
+        <label>
+          Phone Number:<br>
+          <input type="tel" id="user-phone" required>
+        </label>
+        <label>
+          Age:<br>
+          <input type="number" id="user-age" required>
+        </label>
+        <label>
+          Sex:<br>
+          <select id="user-sex" required>
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+        <button type="submit">Register</button>
+      </form>
+
+      <div id="user-details" style="display:none;">
+        <h3>Welcome, <span id="user-display-name"></span></h3>
+        <p>Phone: <span id="user-display-phone"></span></p>
+        <p>Age: <span id="user-display-age"></span></p>
+        <p>Sex: <span id="user-display-sex"></span></p>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -32,6 +72,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
