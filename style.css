@@ -1,3 +1,4 @@
+/* General styles */
 body {
   font-family: 'Inter', Arial, sans-serif;
   margin: 0;
@@ -23,6 +24,7 @@ h1, h2, h3 {
   margin: 0.2rem 0;
 }
 
+/* Dashboard layout */
 main.dashboard {
   display: flex;
   gap: 2rem;
@@ -59,6 +61,7 @@ main.dashboard {
   border-radius: 8px;
 }
 
+/* Hospital / department / doctor items */
 .item {
   padding: 0.8rem;
   margin: 0.4rem 0;
@@ -72,16 +75,23 @@ main.dashboard {
   background-color: #e8f0fe;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #f0f0f0;
-  color: #555;
+/* Doctor card */
+.doctor-card {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.doctor-card p {
+  margin: 0.5rem 0;
 }
 
 #book-btn {
-  width: 100%;           /* full width */
-  max-width: 300px;      /* optional, prevents it from being too wide */
+  width: 100%;
+  max-width: 300px;
   padding: 0.8rem;
   font-size: 1rem;
   border: none;
@@ -97,3 +107,9 @@ footer {
   background-color: #0056b3;
 }
 
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f0f0f0;
+  color: #555;
+}
