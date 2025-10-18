@@ -1,5 +1,16 @@
+/* Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #f5f7fa;
   color: #333;
   display: flex;
@@ -7,43 +18,92 @@ body {
   min-height: 100vh;
 }
 
+/* Header */
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #007bff;
   color: white;
-  text-align: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  flex-shrink: 0;
 }
 
+header h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+header p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+header img {
+  height: 50px;
+  width: auto;
+}
+
+/* Main Content */
 main {
+  flex: 1 0 auto;
   max-width: 600px;
-  width: 100%;
-  margin: 2rem auto 0; /* remove bottom margin to avoid shrinking */
+  width: 90%;
+  margin: 2rem auto 0;
   background: white;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  flex-grow: 1;         /* fill remaining space */
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;          /* space between items */
+  gap: 0.8rem;
 }
 
+/* Hospital/Department/Doctor Items */
 .item {
-  padding: 0.8rem;
+  padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s;
+  background-color: #fafafa;
 }
 
 .item:hover {
   background-color: #e8f0fe;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* Back button */
+button {
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
   background: #f0f0f0;
   color: #555;
-  margin-top: auto;      /* push footer to bottom */
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+/* Small State Info */
+.state-info {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
 }
