@@ -22,11 +22,15 @@ async function loadDoctorDetails() {
     <h2>${doctor}</h2>
     <p><strong>Hospital:</strong> ${hospital}</p>
     <p><strong>Department:</strong> ${department}</p>
-    <p>Designation Consultant Dermatologist
-       Hospital	VIMSAR, Burla, Sambalpur
-       Core Expertise	Cosmetic Dermatology and Chronic Skin Conditions
-      Key Focus Areas	Cosmetic Dermatology, management of Psoriasis, and general dermatology practice.
-     Professional Goal	To offer specialized, contemporary, and personalized skin health solutions.</p>
+    <p>Designation Consultant Dermatologist</p>
+    <hr>
+     <p>Hospital	VIMSAR, Burla, Sambalpur</p>
+     <hr>
+     <p>Core Expertise	Cosmetic Dermatology and Chronic Skin Conditions</p>
+     <hr>
+    <p>Key Focus Areas	Cosmetic Dermatology, management of Psoriasis, and general dermatology practice.</p>
+    <hr>
+     <p>Professional Goal	To offer specialized, contemporary, and personalized skin health solutions.</p>
     <button id="book-btn">Book Appointment</button>
   `;
 
