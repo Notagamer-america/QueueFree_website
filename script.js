@@ -25,14 +25,15 @@ function loadDepartments(data, hospital) {
   Object.keys(departments).forEach(dept => {
     const div = document.createElement("div");
     div.className = "item";
-    div.textContent = dept;  // now guaranteed to be a string
-    div.onclick = () => loadDoctors(data, hospital, dept);
+    div.textContent = dept;
+    div.onclick = () => loadDoctors(data, hospital, dept); // uses updated function
     content.appendChild(div);
   });
 
   addBackButton(() => loadHospitals());
 }
 
+// <-- REPLACE OLD loadDoctors FUNCTION WITH THIS ONE -->
 function loadDoctors(data, hospital, dept) {
   const doctors = data.hospitals[hospital].departments[dept];
   content.innerHTML = `<h2>${dept} – Doctors</h2>`;
@@ -41,6 +42,11 @@ function loadDoctors(data, hospital, dept) {
     const div = document.createElement("div");
     div.className = "item";
     div.textContent = doc;
+    // Navigate to doctor.html with query parameters
+    div.onclick = () => {
+      const url = `doctor.html?hospital=${encodeURIComponent(hospital)}&department=${encodeURIComponent(dept)}&doctor=${encodeURIComponent(doc)}`;
+      window.location.href = url;
+    };
     content.appendChild(div);
   });
 
