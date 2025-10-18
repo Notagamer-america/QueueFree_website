@@ -4,37 +4,73 @@
     "Khurda": {
       "AIIMS Bhubaneswar": {
         "departments": {
-          "Cardiology": ["Dr. R. Mishra", "Dr. A. Patnaik", "Dr. S. Mohapatra"],
-          "Neurology": ["Dr. K. Sahu", "Dr. M. Das"],
-          "Pediatrics": ["Dr. S. Tripathy", "Dr. P. Mallick"]
+          "Cardiology": [
+            {
+              "name": "Dr. R. Mishra",
+              "status": "Busy",
+              "description": "Specializes in interventional cardiology and complex angioplasty. Head of Cardiology Department.",
+              "currentQueue": [
+                {"patientId": "P001", "time": "2025-10-18T13:00:00Z"},
+                {"patientId": "P002", "time": "2025-10-18T13:30:00Z"}
+              ]
+            },
+            {
+              "name": "Dr. A. Patnaik",
+              "status": "Available",
+              "description": "Expert in non-invasive cardiac imaging and pediatric heart defects.",
+              "currentQueue": []
+            }
+          ],
+          "Neurology": [
+            {
+              "name": "Dr. K. Sahu",
+              "status": "Break",
+              "description": "Focuses on stroke management and neurorehabilitation.",
+              "currentQueue": []
+            }
+          ]
         }
       },
       "Apollo Hospitals Bhubaneswar": {
         "departments": {
-          "Gastroenterology": ["Dr. J. Rao", "Dr. V. Sharma"],
-          "Nephrology": ["Dr. L. Kar"]
+          "Gastroenterology": [
+            {
+              "name": "Dr. J. Rao",
+              "status": "Available",
+              "description": "Specialist in advanced therapeutic endoscopy (ERCP, EUS).",
+              "currentQueue": []
+            }
+          ]
         }
       }
     },
     "Cuttack": {
       "SCB Medical College": {
         "departments": {
-          "Orthopedics": ["Dr. P. Mohanty", "Dr. L. Behera"],
-          "ENT": ["Dr. T. Panda", "Dr. N. Roy"]
-        }
-      },
-      "Ashwini Hospital Cuttack": {
-        "departments": {
-          "Ophthalmology": ["Dr. G. Biswal"],
-          "Psychiatry": ["Dr. B. Rout"]
+          "Orthopedics": [
+            {
+              "name": "Dr. P. Mohanty",
+              "status": "Busy",
+              "description": "Leading trauma surgeon with expertise in joint replacement surgery.",
+              "currentQueue": [
+                {"patientId": "P101", "time": "2025-10-18T14:00:00Z"}
+              ]
+            }
+          ]
         }
       }
     },
     "Sambalpur": {
       "VIMSAR Burla": {
         "departments": {
-          "Dermatology": ["Dr. R. Swain", "Dr. K. Sethi"],
-          "General Surgery": ["Dr. D. Nanda", "Dr. B. Sahoo"]
+          "Dermatology": [
+            {
+              "name": "Dr. R. Swain",
+              "status": "Available",
+              "description": "Cosmetic dermatologist and expert in chronic skin conditions like Psoriasis.",
+              "currentQueue": []
+            }
+          ]
         }
       }
     }
