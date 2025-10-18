@@ -1,13 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-}
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f7fa;
@@ -25,18 +15,21 @@ header {
 }
 
 main {
-  flex: 1 0 auto;
   max-width: 600px;
-  margin: 2rem auto;
+  width: 100%;
+  margin: 2rem auto 0; /* remove bottom margin to avoid shrinking */
   background: white;
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;         /* fill remaining space */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;          /* space between items */
 }
 
 .item {
   padding: 0.8rem;
-  margin: 0.4rem 0;
   border: 1px solid #ccc;
   border-radius: 8px;
   cursor: pointer;
@@ -52,5 +45,5 @@ footer {
   padding: 1rem;
   background: #f0f0f0;
   color: #555;
+  margin-top: auto;      /* push footer to bottom */
 }
-
