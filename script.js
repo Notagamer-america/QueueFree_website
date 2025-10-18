@@ -45,11 +45,9 @@ function loadDoctors(data, hospital, dept) {
 function addBackButton(callback) {
   const btn = document.createElement("button");
   btn.textContent = "← Back";
-  btn.style.marginTop = "1rem";
   btn.onclick = callback;
   content.appendChild(btn);
 }
 
 // Initialize homepage
 loadHospitals();
-
