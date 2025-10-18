@@ -46,3 +46,27 @@ footer {
   background: #f0f0f0;
   color: #555;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* make body at least full viewport height */
+}
+
+main {
+  flex: 1; /* grow and fill available space */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f0f0f0;
+  color: #555;
+}
+
