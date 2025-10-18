@@ -1,3 +1,5 @@
+const content = document.getElementById("content");
+
 async function fetchHospitalData() {
   const response = await fetch('hospitals.json');
   return await response.json();
@@ -50,3 +52,4 @@ function addBackButton(callback) {
 
 // Initialize homepage
 loadHospitals();
+
