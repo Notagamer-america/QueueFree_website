@@ -1,23 +1,41 @@
 {
   "state": "Odisha",
-  "hospitals": {
-    "AIIMS Bhubaneswar": {
-      "departments": {
-        "Cardiology": ["Dr. R. Mishra", "Dr. A. Patnaik"],
-        "Neurology": ["Dr. K. Sahu", "Dr. M. Das"],
-        "Pediatrics": ["Dr. S. Tripathy"]
+  "districts": {
+    "Khurda": {
+      "AIIMS Bhubaneswar": {
+        "departments": {
+          "Cardiology": ["Dr. R. Mishra", "Dr. A. Patnaik", "Dr. S. Mohapatra"],
+          "Neurology": ["Dr. K. Sahu", "Dr. M. Das"],
+          "Pediatrics": ["Dr. S. Tripathy", "Dr. P. Mallick"]
+        }
+      },
+      "Apollo Hospitals Bhubaneswar": {
+        "departments": {
+          "Gastroenterology": ["Dr. J. Rao", "Dr. V. Sharma"],
+          "Nephrology": ["Dr. L. Kar"]
+        }
       }
     },
-    "SCB Medical College": {
-      "departments": {
-        "Orthopedics": ["Dr. P. Mohanty", "Dr. L. Behera"],
-        "ENT": ["Dr. T. Panda"]
+    "Cuttack": {
+      "SCB Medical College": {
+        "departments": {
+          "Orthopedics": ["Dr. P. Mohanty", "Dr. L. Behera"],
+          "ENT": ["Dr. T. Panda", "Dr. N. Roy"]
+        }
+      },
+      "Ashwini Hospital Cuttack": {
+        "departments": {
+          "Ophthalmology": ["Dr. G. Biswal"],
+          "Psychiatry": ["Dr. B. Rout"]
+        }
       }
     },
-    "VIMSAR Burla": {
-      "departments": {
-        "Dermatology": ["Dr. R. Swain"],
-        "General Surgery": ["Dr. D. Nanda", "Dr. B. Sahoo"]
+    "Sambalpur": {
+      "VIMSAR Burla": {
+        "departments": {
+          "Dermatology": ["Dr. R. Swain", "Dr. K. Sethi"],
+          "General Surgery": ["Dr. D. Nanda", "Dr. B. Sahoo"]
+        }
       }
     }
   }
