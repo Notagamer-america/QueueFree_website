@@ -1,10 +1,12 @@
 const content = document.getElementById("content");
 
+// Fetch JSON
 async function fetchHospitalData() {
   const response = await fetch('hospitals.json');
   return await response.json();
 }
 
+// Load hospitals
 async function loadHospitals() {
   const data = await fetchHospitalData();
   content.innerHTML = `<h2>Hospitals</h2><p class='state-info'>State: ${data.state}</p>`;
@@ -18,6 +20,7 @@ async function loadHospitals() {
   });
 }
 
+// Load departments
 function loadDepartments(data, hospital) {
   const departments = data.hospitals[hospital].departments;
   content.innerHTML = `<h2>${hospital} – Departments</h2>`;
@@ -26,14 +29,14 @@ function loadDepartments(data, hospital) {
     const div = document.createElement("div");
     div.className = "item";
     div.textContent = dept;
-    div.onclick = () => loadDoctors(data, hospital, dept); // uses updated function
+    div.onclick = () => loadDoctors(data, hospital, dept);
     content.appendChild(div);
   });
 
   addBackButton(() => loadHospitals());
 }
 
-// <-- REPLACE OLD loadDoctors FUNCTION WITH THIS ONE -->
+// Load doctors
 function loadDoctors(data, hospital, dept) {
   const doctors = data.hospitals[hospital].departments[dept];
   content.innerHTML = `<h2>${dept} – Doctors</h2>`;
@@ -42,7 +45,7 @@ function loadDoctors(data, hospital, dept) {
     const div = document.createElement("div");
     div.className = "item";
     div.textContent = doc;
-    // Navigate to doctor.html with query parameters
+    // Navigate to doctor.html
     div.onclick = () => {
       const url = `doctor.html?hospital=${encodeURIComponent(hospital)}&department=${encodeURIComponent(dept)}&doctor=${encodeURIComponent(doc)}`;
       window.location.href = url;
@@ -53,6 +56,7 @@ function loadDoctors(data, hospital, dept) {
   addBackButton(() => loadDepartments(data, hospital));
 }
 
+// Back button
 function addBackButton(callback) {
   const btn = document.createElement("button");
   btn.textContent = "← Back";
@@ -60,5 +64,52 @@ function addBackButton(callback) {
   content.appendChild(btn);
 }
 
-// Initialize homepage
+// Initialize hospitals
 loadHospitals();
+
+// ---------------------
+// User Registration Logic
+// ---------------------
+const userForm = document.getElementById('user-form');
+const userDetails = document.getElementById('user-details');
+const displayName = document.getElementById('user-display-name');
+const displayPhone = document.getElementById('user-display-phone');
+const displayAge = document.getElementById('user-display-age');
+const displaySex = document.getElementById('user-display-sex');
+const logoutBtn = document.getElementById('logout-btn');
+
+userForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById('user-name').value;
+  const phone = document.getElementById('user-phone').value;
+  const age = document.getElementById('user-age').value;
+  const sex = document.getElementById('user-sex').value;
+
+  const user = { name, phone, age, sex };
+  localStorage.setItem('queuefreeUser', JSON.stringify(user));
+
+  showUserDetails(user);
+});
+
+function showUserDetails(user) {
+  userForm.style.display = 'none';
+  userDetails.style.display = 'block';
+  displayName.textContent = user.name;
+  displayPhone.textContent = user.phone;
+  displayAge.textContent = user.age;
+  displaySex.textContent = user.sex;
+}
+
+// Check if user is already logged in
+const savedUser = JSON.parse(localStorage.getItem('queuefreeUser'));
+if (savedUser) {
+  showUserDetails(savedUser);
+}
+
+// Logout
+logoutBtn.addEventListener('click', () => {
+  localStorage.removeItem('queuefreeUser');
+  userDetails.style.display = 'none';
+  userForm.style.display = 'block';
+});
