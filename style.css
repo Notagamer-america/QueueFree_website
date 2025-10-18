@@ -78,3 +78,22 @@ footer {
   background: #f0f0f0;
   color: #555;
 }
+
+#book-btn {
+  width: 100%;           /* full width */
+  max-width: 300px;      /* optional, prevents it from being too wide */
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+#book-btn:hover {
+  background-color: #0056b3;
+}
+
