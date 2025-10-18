@@ -1,0 +1,25 @@
+{
+  "state": "Odisha",
+  "hospitals": {
+    "AIIMS Bhubaneswar": {
+      "departments": {
+        "Cardiology": ["Dr. R. Mishra", "Dr. A. Patnaik"],
+        "Neurology": ["Dr. K. Sahu", "Dr. M. Das"],
+        "Pediatrics": ["Dr. S. Tripathy"]
+      }
+    },
+    "SCB Medical College": {
+      "departments": {
+        "Orthopedics": ["Dr. P. Mohanty", "Dr. L. Behera"],
+        "ENT": ["Dr. T. Panda"]
+      }
+    },
+    "VIMSAR Burla": {
+      "departments": {
+        "Dermatology": ["Dr. R. Swain"],
+        "General Surgery": ["Dr. D. Nanda", "Dr. B. Sahoo"]
+      }
+    }
+    // Add more hospitals as needed
+  }
+}
