@@ -15,7 +15,7 @@ async function fetchHospitalData() {
 }
 
 // Load doctor details
-async function loadDoctorDetails() {
+() {
   const data = await fetchHospitalData();
 
   if (!hospital || !department || !doctor) {
